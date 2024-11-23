@@ -37,7 +37,7 @@ const ProductsView = () => {
     },[productView])
 
     const getProductById = async()=>{
-        const result = await axios.get(`https://e-commerce-web-kohl-six.vercel.app/${url}`);
+        const result = await axios.get(`https://e-commerce-web-kohl-six.vercel.app/getbyId/${url}`);
         setProductView(result.data);
     }
 
