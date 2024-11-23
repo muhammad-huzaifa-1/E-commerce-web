@@ -150,7 +150,7 @@ const ShopContextProvider = (props)=>{
     }
 
     const getProducts = async()=>{
-        let response = await fetch(`http://localhost:5000/fetchProduct`);
+        let response = await fetch(`https://e-commerce-web-kohl-six.vercel.app/fetchProduct`);
         response = await response.json();
         setLatestProducts(response.slice(0,10))
         setBestSeller(response.slice(10,15));
@@ -169,7 +169,7 @@ const ShopContextProvider = (props)=>{
             if(isPresented === false){
                 navigate('/Cart')
                 const proData = cartData.find((product)=> product._id === id);
-                let result = await fetch(`http://localhost:5000/getbyId/${id}`);
+                let result = await fetch(`https://e-commerce-web-kohl-six.vercel.app/${id}`);
                 result = await result.json();
                 if(result){
 
