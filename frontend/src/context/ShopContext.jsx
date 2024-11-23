@@ -169,7 +169,7 @@ const ShopContextProvider = (props)=>{
             if(isPresented === false){
                 navigate('/Cart')
                 const proData = cartData.find((product)=> product._id === id);
-                let result = await fetch(`https://e-commerce-web-kohl-six.vercel.app/${id}`);
+                let result = await fetch(`https://e-commerce-web-kohl-six.vercel.app/getbyId/${id}`);
                 result = await result.json();
                 if(result){
 
