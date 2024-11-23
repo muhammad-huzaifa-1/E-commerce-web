@@ -23,6 +23,10 @@ app.use(cors());
 
 
 // From here all are the API Routes
+
+app.get('/',(req,res)=>{res.send("API WORKING")})
+
+
 app.post('/addProduct',upload.fields([{name:'image1', maxCount:1},{name:'image2', maxCount:1},{name:'image3', maxCount:1},{name:'image4', maxCount:1}]),AddProduct);
 
 app.get('/fetchProduct', async(req, res)=>{
